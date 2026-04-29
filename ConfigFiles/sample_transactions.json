@@ -1,0 +1,512 @@
+[
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242764",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242764",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341475",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242764",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b4",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242764"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242765",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242765",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341476",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242765",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b5",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242765"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242766",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242766",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341477",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242766",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b6",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242766"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242767",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242767",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341478",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242767",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b7",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242767"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242768",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242768",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341479",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242768",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b8",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242768"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242769",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242769",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341480",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242769",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9b9",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242769"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242770",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242770",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341481",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242770",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9ba",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242770"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242771",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242771",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341482",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242771",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9bb",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242771"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242772",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242772",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341483",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242772",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9bc",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242772"
+      }
+    ]
+  },
+  {
+    "Line": [
+      {
+        "quantity": 1,
+        "ticketPrice": 9.95,
+        "actualPrice": 17.71,
+        "isGiftCard": false,
+        "description": "Dogwood Flower Gentle & Clean Foaming Hand Soap Holder",
+        "discountAmount": 0,
+        "lineSequence": 1,
+        "transactionId": "6617749242773",
+        "article": "26091589",
+        "isBOPIS": false,
+        "originalTransactionId": "6617749242773",
+        "lastUpdatedTS": "1743384678421",
+        "taxAmount": 2.78,
+        "status": "Invoiced"
+      }
+    ],
+    "Transaction": {
+      "loyaltyId": "94960341484",
+      "storeNumber": "83020",
+      "actualTimestampUTC": "1743384678421",
+      "taxTotal": 3.34,
+      "channelType": "Web",
+      "transactionTS": "1743384678421",
+      "subTotal": 9.95,
+      "transactionId": "6617749242773",
+      "transactionType": "Sale",
+      "businessDate": "1773269137000",
+      "total": 29.26,
+      "discountTotal": 0,
+      "offsetTimezone": "GMT-00:00",
+      "countryCode": "US",
+      "lastUpdatedTS": "1743384678421",
+      "registerNumber": "000",
+      "brand": "BBW",
+      "currencyCode": "USD",
+      "cid": "99a44f45-fa6c-4830-8655-29d9fcdf06e7"
+    },
+    "Promo": [
+      {
+        "promoSetId": "642898fcce3645449a4e7944c9bd",
+        "promoSequence": 1,
+        "promoDesc": "50%OffSoap",
+        "couponId": "50%OffSoap",
+        "lineSequence": 1,
+        "transactionId": "6617749242773"
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+replicaCount: 1
+  
+image:
+  repository: gigaspaces/di-pluggable-connector
+  pullPolicy: Always
+  tag: "17.0.4"
+
+#imagePullSecrets:
+#  - name: docker-registry-secret
+
+spring:
+  kafka:
+    consumer:
+      enable-auto-commit: false
+    listener:
+      ack-mode: manual
+
+kafka:
+  bootstrapServers: kafka:9092
+  #securityProtocol: SASL_SSL
+  #key: xxxxxx
+  #secret: xxxxxx
+  consumerGroup: couponhub-connector12
+
+publish-errors: true
+create-error-topics: true
+error-topic-name-transformation:
+  pattern: "^(.*)\\.realtime\\.topic$"
+  replacement: "$1_errors.realtime.topic"
+
+space:
+  name: couponhub
+  locators: xap-manager-hs
+  group: xap-17.0.2
+
+connector:
+  transactional-task: true  
+
+security:
+  enabled: false
+
+influxdb:
+  url: http://influxdb:8086 # update
+  database: mydb # update according to the name we have in our deployment
+  username: admin         # optional, may not be required
+  password: adminpassword # optional, may not be required
+  successMetric: pluggable_connector_success_operation_number
+  failMetric: pluggable_connector_failed_operation_number
+    
+pipelineId: pc1 # replace with pluggable connector name provided in helm install
+  
+logging: 
+  level:
+    root: INFO
+    com:
+      gigaspaces:
+        connector: DEBUG
+#  file:
+#    maxhistory: 1   # Retain logs for 1 day
+#    maxsize: 10KB
+#    path: /home/gsods
+

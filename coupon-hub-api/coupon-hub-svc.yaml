@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: coupon-hub-api-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: coupon-hub-api
+  ports:
+    - port: 8175
+      targetPort: 8175
+      name: app

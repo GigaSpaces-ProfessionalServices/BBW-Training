@@ -1,0 +1,79 @@
+global:
+  openshift: false
+  deleterJob:
+    securityContext:
+    imagePullSecrets:
+      - myregistrysecret
+    image:
+      repository: "bitnamilegacy/kubectl"
+      tag: 1.30.1
+  security:
+    enabled: false
+  kafkaRest:
+    enabled: true
+
+kafka:
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/kafka
+    tag: 3.7.0-debian-12-r3
+
+zookeeper:
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/zookeeper
+    tag: 3.9.2-debian-12-r2
+
+
+#tags:
+#  bitnamiImages: false
+
+# To disable/enable kafka-ui (enabled dor Dev)
+redpanda:
+  enabled: true
+
+# Disable di stack (it's not required in BBW)
+di:
+  enabled: false
+flink:
+  enabled: false
+
+service-operator:
+  enabled: false
+
+service-creator:
+  enabled: false
+
+grafana:
+  persistence:
+    enabled: true
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+        - name: 'default'
+          orgId: 1
+          folder: ''
+          type: file
+          disableDeletion: false
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/default
+  extraConfigmapMounts:
+    - name: grafana-dashboards
+      mountPath: /var/lib/grafana/dashboards/default
+      configMap: grafana-dashboards
+      readOnly: true
+#  dashboards:
+#    default:
+#      sushil-dashboard:
+#        file: /home/sushil.mansukhani/Sushil/Projects/git/xap-research/k8s/1-dih-on-microk8s/dashboards/sushil-dashboard.json
+#        file: ./dashboards/sushil-dashboard.json
+
+manager:
+  ha: false
+  license: "tryme"
+  java:
+    options: |
+      -Dcom.gigaspaces.logger.RollingFileHandler.backup-policy=com.gigaspaces.logger.DeleteBackupPolicy
+      -Dcom.gigaspaces.logger.DeleteBackupPolicy.period=1

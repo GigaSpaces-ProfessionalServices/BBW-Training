@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coupon-hub-api
+spec:
+  selector:
+    matchLabels:
+      app: coupon-hub-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: coupon-hub-api
+    spec:
+      containers:
+        - name: coupon-hub-api
+          image: localhost:32000/coupon-hub-api:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8175
+          env:
+            - name: SPACE_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: coupon-hub-config
+                  key: space.host
+            - name: SPACE_COUPONS_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: coupon-hub-config
+                  key: space.coupons.name

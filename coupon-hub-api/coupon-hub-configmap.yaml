@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coupon-hub-config
+data:
+  space.host: xap-manager-service
+  space.coupons.name: couponhub

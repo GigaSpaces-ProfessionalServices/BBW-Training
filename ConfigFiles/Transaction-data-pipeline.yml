@@ -1,0 +1,244 @@
+dataFormat: JSON
+
+spaceTypes:
+  #transaction
+  - name: "Transaction"
+    dataSource:
+      topic: "bbw_eai.hub.transaction.realtime.topic"
+      selector: "$.Transaction"
+    tiering: warm-only
+    properties:
+      - name: "transactionId"
+        type: "java.lang.String"
+        selector: ".transactionId"
+        attributes: [ spaceid, routingkey ]
+      - name: "brand"
+        type: "java.lang.String"
+        selector: ".brand"
+      - name: "channelType"
+        type: "java.lang.String"
+        selector: ".channelType"
+      - name: "storeNumber"
+        type: "java.lang.String"
+        selector: ".storeNumber"
+      - name: "registerNumber"
+        type: "java.lang.String"
+        selector: ".registerNumber"
+      - name: "businessDate"
+        type: "java.lang.Long"
+        selector: ".businessDate"
+      - name: "transactionType"
+        type: "java.lang.String"
+        selector: ".transactionType"
+      - name: "countryCode"
+        type: "java.lang.String"
+        selector: ".countryCode"
+      - name: "currencyCode"
+        type: "java.lang.String"
+        selector: ".currencyCode"
+      - name: "subTotal"
+        type: "java.lang.Integer"
+        selector: ".subTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "taxTotal"
+        type: "java.lang.Integer"
+        selector: ".taxTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "discountTotal"
+        type: "java.lang.Integer"
+        selector: ".discountTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "total"
+        type: "java.lang.Integer"
+        selector: ".total"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "cid"
+        type: "java.lang.String"
+        selector: ".cid"
+      - name: "loyaltyId"
+        type: "java.lang.String"
+        selector: ".loyaltyId"
+      - name: "actualTimestampUTC"
+        type: "java.lang.Long"
+        selector: ".actualTimestampUTC"
+      - name: "lastUpdatedTS"
+        type: "java.lang.Long"
+        selector: ".lastUpdatedTS"
+
+  #line_item
+  - name: "Line_Item"
+    dataSource:
+      topic: "bbw_eai.hub.transaction.realtime.topic"
+      selector: "$.Line[*]"
+    tiering: warm-only
+    properties:
+      - name: "transactionId"
+        type: "java.lang.String"
+        selector: "$.Transaction.transactionId"  # rootLevel transactionId
+        attributes: [ spaceid, routingkey ]
+      - name: "lineSequence"
+        type: "java.lang.Integer"
+        selector: ".lineSequence"
+        attributes: [ spaceid ]
+      - name: "originalTransactionId"
+        type: "java.lang.String"
+        selector: ".originalTransactionId"
+      - name: "article"
+        type: "java.lang.String"
+        selector: ".article"
+      - name: "description"
+        type: "java.lang.String"
+        selector: ".description"
+      - name: "status"
+        type: "java.lang.String"
+        selector: ".status"
+      - name: "quantity"
+        type: "java.lang.String"
+        selector: ".quantity"
+      - name: "ticketPrice"
+        type: "java.lang.Integer"
+        selector: ".ticketPrice"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "taxAmount"
+        type: "java.lang.Integer"
+        selector: ".taxAmount"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "discountAmount"
+        type: "java.lang.Integer"
+        selector: ".discountAmount"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "actualPrice"
+        type: "java.lang.Integer"
+        selector: ".actualPrice"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "isGiftCard"
+        type: "java.lang.Boolean"
+        selector: ".isGiftCard"
+      - name: "isBOPIS"
+        type: "java.lang.Boolean"
+        selector: ".isBOPIS"
+      - name: "lastUpdatedTS"
+        type: "java.lang.Long"
+        selector: ".lastUpdatedTS"
+        
+  #promos
+  - name: "Promos"
+    dataSource:
+      topic: "bbw_eai.hub.transaction.realtime.topic"
+      selector: "$.Promo[*]"
+    tiering: warm-only
+    properties:
+      - name: "transactionId"
+        type: "java.lang.String"
+        selector: "$.Transaction.transactionId"  # rootLevel transactionId
+        attributes: [ spaceid, routingkey ]
+      - name: "lineSequence"
+        type: "java.lang.Integer"
+        selector: ".lineSequence"
+        attributes: [ spaceid ]
+      - name: "promoSequence"
+        type: "java.lang.Integer"
+        selector: ".promoSequence"
+        attributes: [ spaceid ]
+      - name: "promoSetId"
+        type: "java.lang.String"
+        selector: ".promoSetId"
+      - name: "promoDesc"
+        type: "java.lang.String"
+        selector: ".promoDesc"
+      - name: "couponId"
+        type: "java.lang.String"
+        selector: ".couponId"
+      - name: "isReward"
+        type: "java.lang.Boolean"
+        selector: ".isReward"
+
+  #TransactionByCid
+  - name: "TransactionByCid"
+    dataSource:
+      topic: "bbw_eai.hub.transaction.realtime.topic"
+      selector: "$.Transaction.[?(@.cid != null && @.cid != '' )]"
+    tiering: warm-only
+    indexes:
+      - properties: [ businessDate ]
+        type: ORDERED
+        unique: false
+    properties:
+      - name: "transactionId"
+        type: "java.lang.String"
+        selector: ".transactionId"
+        attributes: [ spaceid ]
+      - name: "brand"
+        type: "java.lang.String"
+        selector: ".brand"
+      - name: "channelType"
+        type: "java.lang.String"
+        selector: ".channelType"
+      - name: "storeNumber"
+        type: "java.lang.String"
+        selector: ".storeNumber"
+      - name: "registerNumber"
+        type: "java.lang.String"
+        selector: ".registerNumber"
+      - name: "businessDate"
+        type: "java.lang.Long"
+        selector: ".businessDate"
+      - name: "transactionType"
+        type: "java.lang.String"
+        selector: ".transactionType"
+      - name: "countryCode"
+        type: "java.lang.String"
+        selector: ".countryCode"
+      - name: "currencyCode"
+        type: "java.lang.String"
+        selector: ".currencyCode"
+      - name: "subTotal"
+        type: "java.lang.Integer"
+        selector: ".subTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "taxTotal"
+        type: "java.lang.Integer"
+        selector: ".taxTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "discountTotal"
+        type: "java.lang.Integer"
+        selector: ".discountTotal"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "total"
+        type: "java.lang.Integer"
+        selector: ".total"
+        expression: |
+          def p = record.getValue(selector)
+          p == null ? null : ((p as BigDecimal) * 100) as int
+      - name: "cid"
+        type: "java.lang.String"
+        attributes: [ routingkey ]
+        selector: ".cid"
+      - name: "loyaltyId"
+        type: "java.lang.String"
+        selector: ".loyaltyId"
+      - name: "actualTimestampUTC"
+        type: "java.lang.Long"
+        selector: ".actualTimestampUTC"

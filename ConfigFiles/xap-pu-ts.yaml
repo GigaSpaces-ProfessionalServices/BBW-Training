@@ -1,0 +1,34 @@
+resources:
+  limits:
+    memory: "1Gi"
+
+properties:
+  - name: "space-config.engine.cache_policy"
+    value: "4"
+
+persistence:
+  enabled: true
+  # storageClassName: "microk8s-hostpath"
+  accessMode: "ReadWriteOnce"
+  size: "5Gi"
+
+env:
+  - name: "GS_SA_PRAGMA_SYNCHRONOUS"
+    value: "1"
+  - name: "GS_SA_PRAGMA_JOURNAL_SIZE_LIMIT"
+    value: "524288000"
+
+java:
+  options: >
+    -Dcom.gigaspaces.logger.RollingFileHandler.backup-policy=com.gigaspaces.logger.DeleteBackupPolicy 
+    -Dcom.gigaspaces.logger.DeleteBackupPolicy.period=1 
+    -Dspace-config.engine.query.result.size.limit=10000 
+    -Dcom.gs.transport_protocol.lrmi.max-conn-pool=2048 
+    -Dcom.gs.transport_protocol.lrmi.max-threads=256
+    -Dcom.gs.hsqldb.all-metrics-recording.enabled=false
+    -Dhsqldb.db.level=OFF
+    -Dgs.gc.collectionTimeThresholdWarning=1000
+    -XX:+DisableExplicitGC
+
+partitions: 4
+ha: false
